@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function Nav({darkMode,setDarkMode,darkModeHandler}) {
   
   const modeHandler=(e)=>{
@@ -8,6 +9,8 @@ export default function Nav({darkMode,setDarkMode,darkModeHandler}) {
   // Compile model from schema
   return (
     <>
+
+    
       {/* Navgation bar */}
       <nav className={`navbar navbar-expand-lg navbar-${darkMode} bg-${darkMode}`}>
         <div className="container-fluid">

@@ -1,6 +1,6 @@
 import React from "react";
 import Buttons from "./Buttons";
-export default function Input({ text, setText }) {
+export default function Input({ text, setText,showAlert}) {
   return (
     <div className="container">
       <h2>Input your text below</h2>
@@ -19,7 +19,7 @@ export default function Input({ text, setText }) {
       <p id="length">
         <b>Words</b> :{text.length > 0 ? text.split(" ").length : "0"}{" "}
       </p>
-      <Buttons text={text} setText={setText} />
+      <Buttons text={text} setText={setText} showAlert={showAlert} />
      
         <h2>Preview</h2>
         <p>{text}</p>

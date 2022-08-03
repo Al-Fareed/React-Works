@@ -5,7 +5,6 @@
 
 Nav{
   font-size:25px;
-  box-shadow: 0px 3px;
 }
 .navbar-brand{
   font-size: 35px;
@@ -39,4 +38,13 @@ p{
 .btn-large{
   width: 150px;
 
+}
+.alertmsg{
+  position:relative;
+  margin-bottom: 0px;
+  font-size: larger;
+  border-radius: 0px;
+}
+.alertmsg{
+  z-index: -1;
 }
