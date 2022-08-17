@@ -48,3 +48,7 @@ p{
 .alertmsg{
   z-index: -1;
 }
+a{
+  text-decoration: none;
+  color: black;
+}

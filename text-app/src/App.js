@@ -1,7 +1,10 @@
 import Input from "./Components/Input";
 import Nav from "./Components/Nav";
 import Alert from "./Components/Alert";
+import About from "./Components/About";
 import { useState } from "react";
+import {Route, Switch  } from "react-router-dom";
+
 function App() {
   const [alert,setAlert]=useState(null);
 
@@ -43,7 +46,19 @@ function App() {
         alert={alert}
         setAlert={setAlert}
         />
-      <Input text={text} setText={setText} showAlert={showAlert}/>
+        
+      <Switch>
+        <Route exact path="/">
+          <Input 
+            text={text} 
+            setText={setText} 
+            showAlert={showAlert}
+          />
+        </Route>
+        <Route exact path='/about'>
+          <About/>
+          </Route>
+      </Switch>
     </div>
   );
 }
