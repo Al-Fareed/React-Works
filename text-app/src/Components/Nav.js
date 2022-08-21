@@ -36,11 +36,12 @@ export default function Nav({darkMode,darkModeHandler}) {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
+              
                 <Link className="nav-link active" to="/about">
-                  About
+                <li className="nav-item">
+                  About</li>
                 </Link>
-              </li>
+              
             </ul>
             {/* Switch for changing mode  */}
             <div className="form-check form-switch mx-3 ">
