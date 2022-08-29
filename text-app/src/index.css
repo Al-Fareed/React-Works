@@ -19,8 +19,7 @@ Nav{
 }
 .container{
   margin-top: 10px;
-  padding: 10px;
-  
+  padding : 10px;
 }
 h2{
   font-weight: 800;
@@ -28,6 +27,8 @@ h2{
 textarea{
   font-size: 25px;
   padding: 10px;
+  width: 80%;
+  min-height: 200px;
 }
 p{
   font-size: 25px;
@@ -41,13 +42,10 @@ p{
 }
 .alertmsg{
   position:relative;
-  margin-bottom: 0px;
   font-size: larger;
-  border-radius: 0px;
+  height: 50px;
 }
-.alertmsg{
-  z-index: -1;
-}
+
 a{
   text-decoration: none;
   color: black;

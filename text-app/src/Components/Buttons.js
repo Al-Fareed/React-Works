@@ -14,7 +14,10 @@ export default function Buttons({text,setText,showAlert}) {
         showAlert('Converted to Lower case ','success')
     }
 
-   
+   const copyTxt=()=>{
+    navigator.clipboard.writeText(text);
+    showAlert('Copied to your clipboard ','success')
+   }
 
     const remSpace=()=>{
         const spaceRmTxt=text.replace(/\s+/g,' ').trim();
@@ -23,20 +26,26 @@ export default function Buttons({text,setText,showAlert}) {
     }
   return (
     <div className='container'>
-    <button type="button" className="btn btn-outline-primary btn-large mx-1"
+    <button type="button" className="btn btn-outline-primary btn-large mx-1 my-1"
         onClick={upper}
         >Uppercase</button>  
 
-    <button type="button" className="btn btn-outline-primary btn-large mx-1"
+    <button type="button" className="btn btn-outline-primary btn-large mx-1 my-1"
         onClick={lower}
         >Lowercase</button>    
       
-        <button type="button" className="btn btn-outline-primary btn-large mx-1"
+        <button type="button" className="btn btn-outline-primary btn-large mx-1 my-1"
         onClick={remSpace}
         style={{width:"200px"}}
         >
         Remove Space</button>  
 
+        <button type="button" className="btn btn-outline-primary btn-large mx-1 my-1"
+        onClick={copyTxt}
+        >
+        Copy Text</button> 
+
     </div>
     );
   }
+  

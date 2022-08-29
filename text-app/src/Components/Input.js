@@ -4,9 +4,7 @@ export default function Input({ text, setText,showAlert}) {
   return (
     <div className="container">
       <h2>Input your text below</h2>
-      <textarea
-        cols="80"
-        rows="10"
+      <textarea className="my-1"
         value={text}
         placeholder="Enter your text here"
         onChange={(e) => {
@@ -17,7 +15,7 @@ export default function Input({ text, setText,showAlert}) {
         <b>Total Characters</b>(including spaces) : {text.length}
       </p>
       <p id="length">
-        <b>Words</b> :{text.length > 0 ? text.split(" ").length : "0"}{" "}
+        <b>Words</b> :   {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}        
       </p>
       <Buttons text={text} setText={setText} showAlert={showAlert} />
      
